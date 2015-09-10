@@ -9,20 +9,24 @@ class ValenbisiSpider(scrapy.Spider):
     start_urls = [
         "http://www.valenbisi.es/Abonate/Abono-de-larga-duracion/Una-inscripcion-economica-y-practica"
     ]
-
     def parse(self, response):
         #for sel in response.xpath('//div/[@class="desc_article"]/ul'):
-        for sel in response.xpath('//div[@class="desc_article"]/ul/li'):
+        for sel in response.xpath('//div[@class="desc_article"]'):
             item = AlquilerBiciItem()
             item['nombre'] = self.name
             item['url'] = self.start_urls[0]
-
-            textos = sel.xpath('//li/b/text()').extract()
-            datos = sel.xpath('//li/b/[contains(text(), "Importe del abono anual")]/text()')
-
-
-            print(sel.xpath('//li/b/text()').extract())
+            todo = sel.xpath('//li')
+            textos = sel.xpath('.//li/b/text()').extract()
+            datos = sel.xpath('.//ul/li/text()').extract()
+            item['Precio1']=datos[0]
+            item['Desc1']=textos[0]
+            item['Precio2']=datos[2]
+            item['Desc2']=textos[2]
+            item['Precio3']=datos[3]
+            item['Desc3']=textos[3]
+            item['Online']='S'
             yield item
+        print(item)
 
 
 

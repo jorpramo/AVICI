@@ -16,6 +16,8 @@ class AlquilerBiciItem(scrapy.Item):
     Desc2 = scrapy.Field()
     Precio2 = scrapy.Field()
     Desc2 = scrapy.Field()
+    Precio3 = scrapy.Field()
+    Desc3 = scrapy.Field()
     Seguro = scrapy.Field()
     Online  = scrapy.Field()
     Usuarios =  scrapy.Field()
