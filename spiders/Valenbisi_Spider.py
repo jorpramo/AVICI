@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 __author__ = 'jpradas'
 import scrapy
-from tutorial.items import AlquilerBiciItem
+from items import AlquilerBiciItem
 
 class ValenbisiSpider(scrapy.Spider):
     name = "Valenbisi"
     allowed_domains = ["Valenbisi.es"]
     start_urls = [
-        "http://www.valenbisi.es/Abonate/Abono-de-larga-duracion/Una-inscripcion-economica-y-practica"
+        "http://cas.valenbisi.es/Abona-t-a-Valenbisi/Abonament-anual/Una-inscripcio-economica-y-practica"
     ]
     def parse(self, response):
         #for sel in response.xpath('//div/[@class="desc_article"]/ul'):
@@ -25,8 +25,9 @@ class ValenbisiSpider(scrapy.Spider):
             item['Precio3']=datos[3]
             item['Desc3']=textos[3]
             item['Online']='S'
+            item['X']='39.47'
+            item['Y']='-0.37'
             yield item
-        print(item)
 
 
 

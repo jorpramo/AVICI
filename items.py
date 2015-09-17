@@ -21,7 +21,23 @@ class AlquilerBiciItem(scrapy.Item):
     Seguro = scrapy.Field()
     Online  = scrapy.Field()
     Usuarios =  scrapy.Field()
+    X= scrapy.Field()
+    Y=scrapy.Field()
 
     # define the fields for your item here like:
     # name = scrapy.Field()
+    pass
+
+class DatosBiciItem(scrapy.Item):
+    nombre = scrapy.Field()
+    url = scrapy.Field()
+    X= scrapy.Field()
+    Y= scrapy.Field()
+    estacion= scrapy.Field()
+    n_estacion= scrapy.Field()
+    direccion= scrapy.Field()
+    disponibles= scrapy.Field()
+    libres= scrapy.Field()
+    total= scrapy.Field()
+    fecha= scrapy.Field()
     pass
