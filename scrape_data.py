@@ -12,9 +12,9 @@ from scrapy.crawler import CrawlerProcess
 
 
 process = CrawlerProcess(get_project_settings())
-#process.crawl(BarcelonabiciSpiderDatos)
-#process.crawl(ValenbisiSpiderDatos)
-#process.crawl(MalagabiciSpiderDatos)
+process.crawl(BarcelonabiciSpiderDatos)
+process.crawl(ValenbisiSpiderDatos)
+process.crawl(MalagabiciSpiderDatos)
 process.crawl(ZaragozabiciSpiderDatos)
 process.start()
 
