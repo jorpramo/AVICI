@@ -23,6 +23,7 @@ class MongoPipeline(object):
         self.client.close()
 
     def process_item(self, item, spider):
+        print(item)
         if item.__class__.__name__=='AlquilerBiciItem':
             self.collection_name='servicios'
             self.db[self.collection_name].replace_one({"nombre": item['nombre']},dict(item), True)

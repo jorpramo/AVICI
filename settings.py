@@ -1,6 +1,6 @@
 __author__ = 'Jorge'
 
-ITEM_PIPELINES = {'avici.pipelines.MongoPipeline':100,}
+ITEM_PIPELINES = {'avici.pipelines.MongoPipeline':100}
 
 MONGODB_SERVER = 'localhost'
 MONGODB_PORT = 27017
