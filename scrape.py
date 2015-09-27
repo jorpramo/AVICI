@@ -1,5 +1,5 @@
 __author__ = 'jpradas'
-import scrapy
+import settings
 from spiders.Valenbisi_Spider import ValenbisiSpider
 from spiders.Malagabici_Spider  import MalagabiciSpider
 from spiders.Barcelonabici_Spider import BarcelonabiciSpider
